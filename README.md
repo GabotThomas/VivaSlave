@@ -2,12 +2,12 @@
 ECV Project
 
 
-Installation package:
+## Installation package:
 
-composer install
-npm install
+- composer install
+- npm install
 
-create database in phpMyAdmin ut8_bin
-change .ENV
+- create database in phpMyAdmin ut8_bin
+- change .ENV
 
-php artisan migrate
+- php artisan migrate
