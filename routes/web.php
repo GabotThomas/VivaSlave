@@ -28,7 +28,13 @@ Route::group(['middleware' => ['auth', 'admin']], function () {
 });*/
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [UserDashBoardController::class, 'index'])->name('user_dashboard');
+    Route::get('/dashboard', [UserDashBoardController::class, 'index']);
 });
+
+
+Route::middleware(['admin'])->group(['prefix' => 'admin'], function () {
+    Route::get('/dashboard', [AdminDashBoardController::class, 'index']);
+});
+
 
 require __DIR__ . '/auth.php';
